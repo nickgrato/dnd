@@ -1,0 +1,27 @@
+@use "styles/variables" as *;
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: $max-container;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  background-color: $color-secondary-bg;
+
+  h1 {
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+.paths {
+  padding: 20px;
+}

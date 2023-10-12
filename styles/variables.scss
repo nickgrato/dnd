@@ -1,0 +1,23 @@
+/**
+FONT
+**/
+$font-size-base: 16;
+
+/**
+LAYOUT
+**/
+$max-container: var(--max-container);
+
+/**
+COLORS
+**/
+$color-primary-bg: var(--color-primary-bg);
+$color-primary-bg-border: var(--color-primary-bg-border);
+$color-secondary-bg: var(--color-secondary-bg);
+$color-track-bg: var(--color-track-bg);
+$color-track-bg-border: var(--color-track-bg-border);
+$color-track-bg-active: var(--color-track-bg-active);
+$color-track-bg-border-active: var(--color-track-bg-border-active);
+$color-highlight: var(--color-highlight);
+$color-primary-font: var(--color-primary-font);
+$color-secondary-font: var(--color-secondary-font);

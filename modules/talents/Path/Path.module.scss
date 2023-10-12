@@ -1,0 +1,27 @@
+@use "styles/variables" as *;
+
+.steps {
+  &_container {
+    display: flex;
+  }
+}
+
+.track {
+  width: 140px;
+  height: 20px;
+  background-color: $color-track-bg;
+  border: solid 2px $color-track-bg-border;
+  transition: background-color 0.5s ease;
+
+  &_active {
+    background-color: $color-track-bg-active;
+    border: solid 2px $color-track-bg-border-active;
+  }
+}
+
+.step {
+  &_container {
+    display: flex;
+    align-items: center;
+  }
+}
