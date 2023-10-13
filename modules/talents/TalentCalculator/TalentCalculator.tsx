@@ -36,6 +36,7 @@ const TalentCalculator = () => {
                 <Path
                   className={styles.path}
                   path={path}
+                  key={path.title}
                   pointsRemaining={pointBank - pointsSpent}
                   onTalentSubtraction={(id) => {
                     setPointsSpent((state) => state - 1)

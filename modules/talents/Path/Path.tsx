@@ -51,7 +51,7 @@ const Path = ({
         <h3>{path.title}</h3>
         <div className={styles.steps_container}>
           {path.talents.map((talent, i) => (
-            <div className={styles.step_container}>
+            <div className={styles.step_container} key={talent.id}>
               {i !== 0 && (
                 <div
                   className={`${styles.track} ${
