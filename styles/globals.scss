@@ -1,5 +1,5 @@
 :root {
-  --max-container: 1200px;
+  --max-container: 1100px;
 
   --color-primary-bg: #060809;
   --color-primary-bg-border: #101315;
@@ -31,5 +31,5 @@ body {
 
 body {
   color: var(--color-primary-font);
-  background: var(--color-primary-bg);
+  background: linear-gradient(90deg, #6ae1d9 0%, #9898ff 100%);
 }

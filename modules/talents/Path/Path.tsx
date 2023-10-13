@@ -6,8 +6,8 @@ import TalentButton from "../TalentButton/TalentButton"
 type PathPropsT = {
   path: PathT
   pointsRemaining: number
-  onTalentAddition: Function
-  onTalentSubtraction: Function
+  onTalentAddition: (id: number) => void
+  onTalentSubtraction: (id: number) => void
   className?: string
 }
 
@@ -20,7 +20,7 @@ const Path = ({
 }: PathPropsT) => {
   const [currentStep, setCurrentStep] = useState(0)
 
-  const handleStepClick = (step: number, button: number) => {
+  const handleTalentClick = (step: number, button: number, id: number) => {
     // Click Left
     if (button === CLICK.LEFT) {
       if (currentStep === step) return
@@ -32,7 +32,7 @@ const Path = ({
       }
 
       setCurrentStep(step)
-      onTalentAddition()
+      onTalentAddition(id)
     }
 
     // Click Right
@@ -41,32 +41,32 @@ const Path = ({
       if (currentStep !== step) return
 
       setCurrentStep(step - 1)
-      onTalentSubtraction()
+      onTalentSubtraction(id)
     }
   }
-
-  const Track = ({ i }: { i: number }) => (
-    <div
-      className={`${styles.track} ${currentStep > i && styles.track_active}`}
-    ></div>
-  )
 
   return (
     <section className={`${styles.wrapper} ${className}`}>
       <div className={styles.container}>
-        <div>{path.title}</div>
+        <h3>{path.title}</h3>
         <div className={styles.steps_container}>
-          {path.steps.map((step, i) => (
+          {path.talents.map((talent, i) => (
             <div className={styles.step_container}>
-              {i !== 0 && <Track i={i} />}
+              {i !== 0 && (
+                <div
+                  className={`${styles.track} ${
+                    currentStep > i && styles.track_active
+                  }`}
+                ></div>
+              )}
 
               <TalentButton
                 isActive={currentStep > i}
                 isDisabled={i + 1 < currentStep || i > currentStep}
                 onClick={(button: number) => {
-                  handleStepClick(i + 1, button)
+                  handleTalentClick(i + 1, button, talent.id)
                 }}
-                step={step}
+                talent={talent}
               />
             </div>
           ))}

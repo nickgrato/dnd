@@ -1,20 +1,20 @@
 import styles from "./TalentButton.module.scss"
 import Image from "next/image"
-import { StepT, CLICK } from "../types"
+import { TalentT, CLICK } from "../types"
 import { MouseEventHandler } from "react"
 
 type TalentButtonPropsT = {
   isActive: boolean
   isDisabled: boolean
   onClick: (button: number) => void
-  step: StepT
+  talent: TalentT
 }
 
 const TalentButton = ({
   isActive,
   isDisabled,
   onClick,
-  step,
+  talent,
 }: TalentButtonPropsT) => {
   const handleContextMenu: MouseEventHandler<HTMLDivElement> = (e) => {
     // Prevent the default browser menu from appearing
@@ -31,11 +31,11 @@ const TalentButton = ({
         onClick={() => {
           onClick(CLICK.LEFT)
         }}
-        aria-label={step.label}
+        aria-label={talent.label}
       >
         <Image
-          src={isActive ? step.activeImage : step.image}
-          alt={step.label}
+          src={isActive ? talent.activeImage : talent.image}
+          alt={talent.label}
         />
       </button>
     </div>

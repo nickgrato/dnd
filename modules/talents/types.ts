@@ -1,6 +1,7 @@
 import { StaticImageData } from "next/image"
 
-export type StepT = {
+export type TalentT = {
+  id: number
   label: string
   image: StaticImageData
   activeImage: StaticImageData
@@ -8,7 +9,7 @@ export type StepT = {
 
 export type PathT = {
   title: string
-  steps: StepT[]
+  talents: TalentT[]
 }
 
 export enum CLICK {

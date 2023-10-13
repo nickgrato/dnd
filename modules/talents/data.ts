@@ -18,23 +18,27 @@ import KillTalentActive from "public/kill_talent_active.png"
 export const TalentPaths = [
   {
     title: "TALENT PATH 1",
-    steps: [
+    talents: [
       {
+        id: 1,
         label: "stack",
         image: StackTalent,
         activeImage: StackTalentActive,
       },
       {
+        id: 2,
         label: "silver",
         image: SilverTalent,
         activeImage: SilverTalentActive,
       },
       {
+        id: 3,
         label: "cake",
         image: CakeTalent,
         activeImage: CakeTalentActive,
       },
       {
+        id: 4,
         label: "crown",
         image: CrownTalent,
         activeImage: CrownTalentActive,
@@ -43,23 +47,27 @@ export const TalentPaths = [
   },
   {
     title: "TALENT PATH 2",
-    steps: [
+    talents: [
       {
+        id: 5,
         label: "ship",
         image: ShipTalent,
         activeImage: ShipTalentActive,
       },
       {
+        id: 6,
         label: "swim",
         image: SwimTalent,
         activeImage: SwimTalentActive,
       },
       {
+        id: 7,
         label: "shock",
         image: ShockTalent,
         activeImage: ShockTalentActive,
       },
       {
+        id: 8,
         label: "kill",
         image: KillTalent,
         activeImage: KillTalentActive,
